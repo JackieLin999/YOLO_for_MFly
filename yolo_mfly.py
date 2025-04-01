@@ -11,7 +11,7 @@ result[0].save(filename='result.jpg')
 '''
 model = YOLO("yolo11n.pt")
 
-model.train(data="/mnt/c/Users/jacki/Documents/mfly_yolo/suas.yaml", epochs=100,
+model.train(data="/path/to/suas.yaml", epochs=100,
     imgsz=640,
     batch=16)
 
