@@ -1,0 +1,20 @@
+# suas.yaml
+path: /mnt/c/Users/jacki/Documents/mfly_yolo/datasets       # Root dataset directory
+train: train/images    # Relative to `path`
+val: val/images        # Relative to `path`
+names:                 # Class names (replace with your classes)
+  0: Person/Mannequin
+  1: Car
+  2: Motorcycle
+  3: Airplane
+  4: Bus
+  5: Boat
+  6: Stop Sign
+  7: Snowboard
+  8: Umbrella
+  9: Sports Ball
+  10: Baseball Bat
+  11: Bed/Mattress
+  12: Tennis Racket
+  13: Suitcase
+  14: Skis
