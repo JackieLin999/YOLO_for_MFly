@@ -30,4 +30,4 @@ model.train(
             plots=plots
             )
 
-torch.save(model.model.state_dict(), "model.pth")
+torch.save(model.model.state_dict(), "run_1.pth")

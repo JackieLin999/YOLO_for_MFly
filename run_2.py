@@ -32,4 +32,4 @@ model.train(
             box=box
             )
 
-torch.save(model.model.state_dict(), "model.pth")
+torch.save(model.model.state_dict(), "run_2.pth")
