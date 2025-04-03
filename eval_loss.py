@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load your CSV
-run = 2
-train = 15
+run = 1
+train = 14
 df = pd.read_csv(f"run_{run}/runs/detect/train{train}/results.csv")
 
 # Create a figure
@@ -13,9 +13,9 @@ plt.plot(df["val/box_loss"], label="Val Box Loss", color="red", linestyle="--")
 plt.plot(df["val/cls_loss"], label="val cls_loss", color="green", linestyle="--")
 plt.plot(df["val/dfl_loss"], label="val dfl_loss", color="blue", linestyle="--")
 
-plt.plot(df["train/box_loss"], label="train Box Loss", color="red", linestyle="--")
-plt.plot(df["train/cls_loss"], label="train cls_loss", color="green", linestyle="--")
-plt.plot(df["train/dfl_loss"], label="train dfl_loss", color="blue", linestyle="--")
+plt.plot(df["train/box_loss"], label="train Box Loss", color="red")
+plt.plot(df["train/cls_loss"], label="train cls_loss", color="green")
+plt.plot(df["train/dfl_loss"], label="train dfl_loss", color="blue")
 
 # Add labels and title
 plt.xlabel("Epoch"), plt.ylabel("Value")
