@@ -2,7 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load your CSV
-df = pd.read_csv("run_1/runs/detect/train14/results.csv")
+run = 2
+train = 15
+df = pd.read_csv(f"run_{run}/runs/detect/train{train}/results.csv")
 
 # Create a figure
 plt.figure(figsize=(12, 6))
@@ -17,9 +19,9 @@ plt.plot(df["train/dfl_loss"], label="train dfl_loss", color="blue", linestyle="
 
 # Add labels and title
 plt.xlabel("Epoch"), plt.ylabel("Value")
-plt.title("run_1 loss comparsion")
+plt.title(f"run_{run} loss comparsion")
 plt.legend()
 
 # Save the plot instead of showing it
-plt.savefig("run_1_loss.png", dpi=300, bbox_inches='tight')
+plt.savefig(f"run_{run}_loss.png", dpi=300, bbox_inches='tight')
 plt.close()  # Clean up memory
