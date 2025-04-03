@@ -2,9 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load your CSV
-run = 1
+run = 3
 train = 14
-df = pd.read_csv(f"run_{run}/runs/detect/train{train}/results.csv")
+df = pd.read_csv(f"run_{run}/runs/detect/train/results.csv")
 
 # Create a figure
 plt.figure(figsize=(12, 6))

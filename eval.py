@@ -2,9 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load your CSV
-run = 2
+run = 3
 train = 15
-df = pd.read_csv(f"run_{run}/runs/detect/train{train}/results.csv")
+df = pd.read_csv(f"run_{run}/runs/detect/train/results.csv")
 
 # Create a figure
 plt.figure(figsize=(12, 6))
@@ -23,5 +23,5 @@ plt.title(f"run {run} metric")
 plt.legend()
 
 # Save the plot instead of showing it
-plt.savefig("run_{run}_metric.png", dpi=300, bbox_inches='tight')
+plt.savefig(f"run_{run}_metric.png", dpi=300, bbox_inches='tight')
 plt.close()  # Clean up memory
