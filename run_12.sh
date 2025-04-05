@@ -22,4 +22,4 @@
 module purge
 module load python/3.12
 source env/bin/activate
-python run_11.py
+python run_12.py
