@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load your CSV
-run = 17
+run = 19
 print(f"run: {run}")
 train = 14
 df = pd.read_csv(f"run_{run}/train/results.csv")
