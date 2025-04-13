@@ -1,7 +1,7 @@
 # suas.yaml
 path: ../mfly_yolo/datasets       # Root dataset directory
-train: train/images    # Relative to `path`
-val: val/images        # Relative to `path`
+train: all/images    # Relative to `path`
+val: all/images        # Relative to `path`
 names:                 # Class names (replace with your classes)
   0: baseball-bat
   1: basketball
