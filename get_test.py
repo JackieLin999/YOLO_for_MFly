@@ -3,14 +3,11 @@ import os
 from PIL import Image
 
 # Load dataset
-train_data = load_dataset("mfly-auton/suas-2025-synthetic-data", split="train")
-val_data = load_dataset("mfly-auton/suas-2025-synthetic-data", split="validation")
+test_data = load_dataset("mfly-auton/suas-2025-synthetic-data", split="test")
 
 # Create YOLO directory structure
-os.makedirs("datasets/train/images", exist_ok=True)
-os.makedirs("datasets/train/labels", exist_ok=True)
-os.makedirs("datasets/val/images", exist_ok=True)
-os.makedirs("datasets/val/labels", exist_ok=True)
+os.makedirs("datasets/test/images", exist_ok=True)
+os.makedirs("datasets/test/labels", exist_ok=True)
 
 def process_example(example, idx, split):
     # Save image
@@ -36,14 +33,10 @@ def process_example(example, idx, split):
             # Write to label file
             f.write(f"{category_id} {x_center:.6f} {y_center:.6f} {width:.6f} {height:.6f}\n")
 
-# Process training data
-for idx, example in enumerate(train_data):
-    process_example(example, idx, "train")
+# Process test data
+for idx, example in enumerate(test_data):
+    process_example(example, idx, "test")
 
-# Process validation data
-for idx, example in enumerate(val_data):
-    process_example(example, idx, "val")
 
 print("Conversion complete!")
-print(f"Training samples: {len(train_data)}")
-print(f"Validation samples: {len(val_data)}")
+print(f"Test samples: {len(test_data)}")
