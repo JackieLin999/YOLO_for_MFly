@@ -2,10 +2,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load your CSV
-run = 28
+run = "best"
 print(f"run: {run}")
 train = 14
-df = pd.read_csv(f"run_{run}/train/results.csv")
+df = pd.read_csv(f"best/train/results.csv")
 
 # Create a figure
 plt.figure(figsize=(12, 6))
@@ -20,9 +20,9 @@ plt.plot(df["train/dfl_loss"], label="train dfl_loss", color="blue")
 
 # Add labels and title
 plt.xlabel("Epoch"), plt.ylabel("Value")
-plt.title(f"run_{run} loss comparsion")
+plt.title(f"run_best loss comparsion")
 plt.legend()
 
 # Save the plot instead of showing it
-plt.savefig(f"run_{run}_loss.png", dpi=300, bbox_inches='tight')
+plt.savefig(f"run_best_loss.png", dpi=300, bbox_inches='tight')
 plt.close()  # Clean up memory
